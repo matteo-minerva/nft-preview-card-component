@@ -1,0 +1,30 @@
+{
+  "name": "nft-preview-card-component",
+  "version": "1.0.0",
+  "description": "Challenge for Frontend Mentor",
+  "scripts": {
+    "build": "grunt",
+    "dev": "dev dev"
+  },
+  "keywords": ["frontend mentor", "frontend", "challenge", "nft preview card component"],
+  "author": "Matteo Minerva",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/grunt": "^0.4.27",
+    "glob": "^7.2.0",
+    "grunt": "^1.4.1",
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-concat": "^2.0.0",
+    "grunt-contrib-connect": "^3.0.0",
+    "grunt-contrib-cssmin": "^4.0.0",
+    "grunt-contrib-imagemin": "^4.0.0",
+    "grunt-contrib-jshint": "^3.1.1",
+    "grunt-contrib-sass": "^2.0.0",
+    "grunt-contrib-uglify": "^5.0.1",
+    "grunt-contrib-watch": "^1.1.0"
+  },
+  "dependencies": {
+    "load-grunt-tasks": "^5.1.0"
+  }
+}

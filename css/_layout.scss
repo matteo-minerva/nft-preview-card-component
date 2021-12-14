@@ -1,0 +1,135 @@
+@use "./variables" as var;
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+body {
+  font-size: 18px;
+  font-family: 'Outfit', sans-serif;
+  background-color: var.$main-bg;
+}
+
+.attribution {
+  color: hsl(0, 0%, 100%);
+  font-size: 11px;
+  text-align: center;
+
+  a {
+    color: hsl(178, 100%, 50%);
+  }
+}
+
+#nft {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+
+  .container {
+    max-width: 325px;
+    margin: 0 auto;
+    padding: 24px;
+    background-color: var.$card-bg;
+    border-radius: 20px;
+
+    &__img {
+      border-radius: 10px;
+      background: url("../../../images/image-equilibrium.jpg") center/cover no-repeat;
+      width: 100%;
+      height: calc(325px - 48px);
+      margin-bottom: 24px;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        position: relative;
+        box-shadow: inset 0 0 0 1000px rgba(0, 255, 247, 0.4);
+        cursor: pointer;
+
+        &::after {
+          position: absolute;
+          animation: delayPseudo 0.3s ease-in;
+          background: url("../../../images/icon-view.svg") center no-repeat;
+          content: "";
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+        }
+      }
+    }
+
+    &__heading {
+      font-size: 20px;
+      font-weight: 600;
+      color: var.$white;
+      margin-bottom: 24px;
+      transition: all .3s ease-in-out;
+
+      &:hover {
+        color: var.$cyan;
+        cursor: pointer;
+      }
+    }
+
+    &__body {
+      font-weight: 300;
+      color: var.$soft-blue;
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    &__values {
+      display: flex;
+      justify-content: space-between;
+      font-size: 16px;
+      margin-bottom: 15px;
+
+      & > * {
+        display: flex;
+        align-items: center;
+        font-weight: 400;
+        font-size: 16px;
+
+        img {
+          margin-right: 5px;
+        }
+      }
+
+      .values__numeric {
+        color: var.$cyan;
+      }
+      .values__days-left {
+        color: var.$soft-blue;
+      }
+    }
+
+    .divider {
+      height: 1px;
+      width: 100%;
+      background-color: var.$line;
+      margin-bottom: 15px;
+    }
+
+    &__author {
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      font-weight: 300;
+      color: var.$soft-blue;
+      .avatar {
+        width: 33px;
+        height: auto;
+        border: 2px var.$white inset;
+        border-radius: 999px;
+        margin-right: 15px;
+      }
+      span {
+        color: var.$white;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+          color: var.$cyan;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
